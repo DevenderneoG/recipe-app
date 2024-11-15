@@ -4,10 +4,11 @@ const app = express();
 
 const corsOptions = {
     origin: "*",
-    Credential: true,
-    optionSuccess: 200.
-}
-app.use(cors(corsOptions));
+    credentials: true,
+    optionSuccessStatus: 200.
+  }
+  app.use(cors(corsOptions));
+  
 
 const { initializeDatabase } = require("./db/db.connect");
 const Recipe = require("./models/recipe.models");
